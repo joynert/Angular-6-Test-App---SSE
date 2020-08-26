@@ -1,0 +1,82 @@
+#control_wrapper.format {
+    width:350px;
+    max-width: 350px;
+    margin: 30px auto;
+    padding-top: 50px;
+}
+
+#dateformats{
+    display: block;
+    width:200px;
+}
+
+.e-success {
+    color:#4e73df;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .doc_blue {
+    background-color: #0000ff;
+  }
+  .doc_verde {
+    background-color: #2FBE5F;
+  }
+  .doc_yellow {
+    background-color: #F9FD03;
+  }
+
+  .rojoerror {
+    font-size: 80%;
+    color: #e74a3b;
+}
+
+
+.custom-jstree-div {
+  overflow: scroll;
+  max-height: 50vmax;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+
+.active {
+  background-color: #ccc;
+}
+
+.bajaBoton{
+  padding-top: 5px;
+}
+
+.ocultarNodo {
+  display: none;
+}
+
+
+
+
+.bd-example-modal-lg .modal-dialog{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+  }
+
+  .bd-example-modal-lg .modal-dialog .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+ 
+

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row justify-content-center main-wrapper ">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="card o-hidden border-0 shadow-lg my-auto itemVerticalMiddle">
+                <div *ngIf="alertActive" class="alert alert-dismissible my-0" [ngClass]="alertType ? 'alert-' + alertType : ''">
+                    <button type="button" class="close" (click)="clearAlert();">&times;</button>{{ alertMsg }}
+                </div>
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-4">
+                                <div class="text-center pt-0 pb-4 pl-4 pr-4">
+                                    <img src="assets/images/logo.png" alt="" class="img-fluid maxWidthLogoImg">
+                                </div>
+                                <form class="user">
+                                    <div class="form-group">
+                                        <input type="text" id="username" class="form-control form-control-user" name="username" placeholder="Usuario" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="password" class="form-control form-control-user" name="password" placeholder="Contraseña" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="customCheck" id="remember" name="remember" value="1">
+                                            <label for="remember">Recordarme?</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-user btn-block" (click)="checkLoginAuth($event)" name="Submit">
+                                    <span *ngIf="!disabledBtn">Iniciar Sesión</span>
+                                    <img *ngIf="disabledBtn" src="assets/images/loader.gif" width="24" height="24"/>
+                                </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

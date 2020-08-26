@@ -1,0 +1,71 @@
+<div class="card shadow mb-4">
+	<div class="card-header py-3">
+		<h6 class="m-0 font-weight-bold text-primary">Favoritos</h6>
+	</div>
+	<div class="card-body">
+		<ng-container *ngIf='loading'>
+			<div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</ng-container>
+
+		<ng-container *ngIf='!loading'>
+			<div class="row">
+				<div *ngFor="let movie of movies; let i = index" class="col-lg-4 col-md-6 col-s-12 mb-4">
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary">{{ movie.Title }}</h6>
+						</div>
+						<div class="card-body">
+							<div class="text-center">
+								<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+									src="{{ movie.Poster }}" alt="">
+							</div>
+							<p>Año: {{ movie.Year }}</p>
+							<button class="btn btn-outline-primary" (click)="verDetalle(movie.imdbID);">Ver
+								detalles</button>
+							<button class="btn btn-outline-danger" (click)="removefromFavs(movie.imdbID);">Quitar a
+								Favoritos</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ng-container>
+
+	</div>
+</div>
+
+<div id="detalleModal" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div *ngIf="movieDet" class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">{{ movieDet.Title }}</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table id="grillaImportacionTabla_1" class="table data-table table-bordered mb-0 display fixed_header">
+					<tbody>
+						<tr>
+							<td>Lanzamiento</td>
+							<td>{{ movieDet.Released }}</td>
+						</tr>
+						<tr>
+							<td>Duración</td>
+							<td>{{ movieDet.Runtime }}</td>
+						</tr>
+						<tr>
+							<td>Director</td>
+							<td>{{ movieDet.Director }}</td>
+						</tr>
+						<tr>
+							<td>Sinopsis</td>
+							<td>{{ movieDet.Plot }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<ul *ngIf="!loginPage" class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion fullHeight"
+    [class.toggled]="isMobile || isCollapsed" id="accordionSidebar" (window:resize)="onResize()">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/home"
+        (click)="clearCurrentModule(); cleanMenu();">
+        <img src="assets/images/logo.png" alt="" class="logoPR">
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+
+    <div class="sidebar-heading">
+        Menú
+    </div>
+
+    <li class="nav-item">
+
+        <a class="nav-link" href="/#/home" (click)="cleanBreadCrumb()">
+            <i class="fas fa-fw fa-home"></i>
+            <span>Inicio</span>
+        </a>
+
+    </li>
+    <li class="nav-item">
+
+        <a class="nav-link" href="/#/favoritos" (click)="cleanBreadCrumb()">
+            <i class="fas fa-fw fa-star"></i>
+            <span>Favoritos</span>
+        </a>
+
+    </li>
+    <hr class="sidebar-divider">
+
+</ul>
+<!-- End of Sidebar -->

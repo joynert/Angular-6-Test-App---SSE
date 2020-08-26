@@ -1,0 +1,11 @@
+<div id="mainAlertContainer" class="alertContainer">
+    <div *ngFor="let alert of alerts" class="{{cssClass(alert)}} alert-dismissable">
+        {{alert.message}}
+        <a class="close cursor-hand" (click)="removeAlert(alert)">&times;</a>
+    </div>
+    <div *ngIf="alerts && alerts.length > 1" class="text-center">
+        <button type="button" class="btn btn-primary btn-circle" (click)="clear();">
+            <i class="fas fa-broom"></i>
+        </button>
+    </div>
+</div>
