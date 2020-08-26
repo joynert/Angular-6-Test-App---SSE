@@ -13,3 +13,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Archivo favoritos.php
 
 Guardar el archivo en una ruta de localhost en la raiz `localhost/favoritos.php` debe ser la ruta para acceder al mismo.
+
+## login
+
+para acceder al login utilizar:
+
+username: user, password: 1234
+
+o
+
+username: testing, password: 0987
